@@ -29,18 +29,7 @@ body {
   font-optical-sizing: auto;
   background-color: #eee;
 }
-.alert {
-  position: absolute;
-  top: -2.2rem;
-  text-align: center;
-  color: rgba(154, 19, 19, 0.815);
-  letter-spacing: 2px;
-  font-size: 28pxpx;
-  transition: opacity 300ms ease;
-  opacity: 0;
-  font-family: system-ui, sans-serif;
-  text-transform: capitalize;
-}
+
 h1 {
   padding: 20px;
   margin: 0 0 20px;
@@ -56,14 +45,28 @@ main {
   flex-wrap: wrap;
   padding: 1rem;
 }
-.container{
-  position: relative;
-}
+
 .first-wrapper {
   .container {
     padding-left: 15px;
     padding-right: 15px;
     margin: 20px auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    .alert {
+      position: absolute;
+      top: -2.2rem;
+      text-align: center;
+      color: rgba(154, 19, 19, 0.815);
+      letter-spacing: 2px;
+      font-size: 28pxpx;
+      margin: 0 auto;
+      transition: opacity 700ms ease-in-out;
+      opacity: 0;
+      font-family: system-ui, sans-serif;
+      text-transform: capitalize;
+    }
     .add-box {
       background-color: var(--white);
       padding: 20px;
