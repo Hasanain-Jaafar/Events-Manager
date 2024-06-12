@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/icon.svg" type="image/x-icon">
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet">
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css">
+    <title> Events Manager </title>
+</head>
+
+<body>
+    <h1>Events Manager</h1>
+    <main>
+        <!-- > First Section -->
+        <section class="first-wrapper">
+            <div class="container">
+                <h2 class="alert hidden">💥Please fill out the fields💥</h2>
+                <div class="add-box">
+                    <h2>Add Event</h2>
+                    <input type="text" class="event-name" placeholder="✒️ Event Name ">
+                    <input type="text" class="organizer" placeholder="📈 Event organizer ">
+                    <input type="date" class="event-date">
+                    <h5>Event Description</h5>
+                    <textarea class="event-description" placeholder="✏️ write description here"
+                        maxlength="500"> </textarea>
+                    <button class="add" onclick="addEvent()"> Add Event <img src="./assets/uil--notes.svg"
+                            alt=""></button>
+                </div>
+
+            </div>
+        </section>
+        <!-- > Second Section -->
+        <section class="second-wrapper">
+            <div class="events"></div>
+        </section>
+    </main>
+    <script src="main.js"></script>
+</body>
+
+</html>
