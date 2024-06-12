@@ -12,3 +12,4 @@
 - user can delete events
 - user can see the time left for that event
 - Application is responsive  
+<img src="/assets/event manager mobil.png">
