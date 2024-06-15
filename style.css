@@ -29,7 +29,11 @@ body {
   font-optical-sizing: auto;
   background-color: #eee;
 }
-
+.redAlert{
+  border-bottom: 2px solid red !important;
+  background-color: #f0ad8e27 !important;
+  transition: all 600ms ease-in-out;
+}
 h1 {
   padding: 20px;
   margin: 0 0 20px;
@@ -54,14 +58,15 @@ main {
     position: relative;
     display: flex;
     justify-content: center;
+    max-width: 98dvw;
+
     .alert {
       position: absolute;
       top: -2.2rem;
       text-align: center;
       color: rgba(154, 19, 19, 0.815);
       letter-spacing: 2px;
-      font-size: 28pxpx;
-      margin: 0 auto;
+      font-size: 20px;
       transition: opacity 700ms ease-in-out;
       opacity: 0;
       font-family: system-ui, sans-serif;
@@ -228,13 +233,16 @@ main {
 }
 
 @media screen and (max-width: 375px) {
+  body{
+    max-width: 100dvw;
+    border:1px solid red;
+  }
   body h1 {
     font-size: 1.8rem;
-    margin: 0;
+    margin-bottom: 1.2rem;
     padding: 0.8rem;
   }
   main {
-    /* min-width: 100vw; */
     padding: 0;
     margin: 0;
   }

@@ -1,3 +1,4 @@
+const inputs = document.querySelectorAll("input");
 function setMinDate() {
   const today = new Date().toISOString().split("T")[0];
   // document.querySelector(".event-date").setAttribute("min",today);
@@ -10,6 +11,16 @@ function setMinDate() {
     }
   });
 }
+function fireAlertMsg() {
+  inputs.forEach((input) => {
+    if (input.classList.contains("redAlert") && input == "") {
+      input.classList.toggle("redAlert");
+    } else {
+      input.classList.add("redAlert");
+    }
+  });
+}
+
 setMinDate();
 function addEvent() {
   const eventName = document.querySelector(".event-name").value;
@@ -40,6 +51,7 @@ function addEvent() {
     displayEvents();
   } else {
     alertMsg.style.opacity = 1;
+    fireAlertMsg();
   }
 }
 function displayEvents() {
