@@ -16,6 +16,8 @@
   --txt-dark: #334a52;
   --txt-light: #5b5b5be6;
   --txt-extralight: #505050d6;
+  /* # Font Size */
+  --fz: clamp(14px, 1.5vw, 1rem);
   /* # background */
   --bg-warm: #90715924;
   /* ! */
@@ -29,7 +31,7 @@ body {
   font-optical-sizing: auto;
   background-color: #eee;
 }
-.redAlert{
+.redAlert {
   border-bottom: 2px solid red !important;
   background-color: #f0ad8e27 !important;
   transition: all 600ms ease-in-out;
@@ -45,7 +47,7 @@ main {
   display: flex;
   margin: 0 auto;
   flex-direction: column;
-  gap: 1rem;
+  /* gap: 1rem; */
   flex-wrap: wrap;
   padding: 1rem;
 }
@@ -65,7 +67,6 @@ main {
       top: -2.2rem;
       text-align: center;
       color: rgba(154, 19, 19, 0.815);
-      letter-spacing: 2px;
       font-size: 20px;
       transition: opacity 700ms ease-in-out;
       opacity: 0;
@@ -95,6 +96,9 @@ main {
         border: none;
         border-bottom: 2px solid var(--lght-gray);
         background-color: var(--white);
+      }
+      input::placeholder{
+        font-size: var(--fz);
       }
       input:focus {
         outline: none;
@@ -147,7 +151,8 @@ main {
   .events {
     padding: 15px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-content: center;
     gap: 1rem;
     .event {
       display: flex;
@@ -166,14 +171,13 @@ main {
           color: var(--txt-light);
         }
         p {
-          font-size: 1rem;
+          font-size: var(--fz);
           background-color: #fff;
           border-radius: 4px;
-          margin-right: 2%;
-          padding: 0.3rem 1rem;
+          padding: 0.3rem .4rem;
           box-shadow: var(--shadow);
           border: 1px solid var(--txt-light);
-          font-weight: 600;
+          font-weight: 500;
           color: var(--acc-clr);
           span {
             color: var(--txt-dark);
@@ -210,7 +214,7 @@ main {
       p {
         color: var(--txt-extralight);
         font-weight: normal;
-        font-size: clamp(12px, 1.5vw, 1rem);
+        font-size: var(--fz);
       }
       button {
         width: 100%;
@@ -233,9 +237,9 @@ main {
 }
 
 @media screen and (max-width: 375px) {
-  body{
+  body {
     max-width: 100dvw;
-    border:1px solid red;
+    border: 1px solid red;
   }
   body h1 {
     font-size: 1.8rem;
@@ -260,9 +264,14 @@ main {
       gap: 0.5rem;
       padding: 0;
     }
+    .container .alert {
+      max-width: 100%;
+      font-size: 10px;
+    }
   }
   .second-wrapper {
     padding: 0 10px;
+    max-width: 100%;
   }
   .description {
     display: grid;
