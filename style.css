@@ -149,7 +149,7 @@ main {
   padding-left: 15px;
   padding-right: 15px;
   .events {
-    padding: 15px;
+    padding: 0 15px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     justify-content: center;
