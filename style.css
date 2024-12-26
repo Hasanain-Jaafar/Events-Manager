@@ -97,7 +97,7 @@ main {
         border-bottom: 2px solid var(--lght-gray);
         background-color: var(--white);
       }
-      input::placeholder{
+      input::placeholder {
         font-size: var(--fz);
       }
       input:focus {
@@ -174,7 +174,7 @@ main {
           font-size: var(--fz);
           background-color: #fff;
           border-radius: 4px;
-          padding: 0.3rem .4rem;
+          padding: 0.3rem 0.4rem;
           box-shadow: var(--shadow);
           border: 1px solid var(--txt-light);
           font-weight: 500;
@@ -239,7 +239,6 @@ main {
 @media screen and (max-width: 375px) {
   body {
     max-width: 100dvw;
-    border: 1px solid red;
   }
   body h1 {
     font-size: 1.8rem;
@@ -259,7 +258,7 @@ main {
   }
   .event {
     .event-head {
-      flex-direction: row;
+      flex-direction: column;
       align-items: center;
       gap: 0.5rem;
       padding: 0;
