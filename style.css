@@ -129,8 +129,7 @@ main {
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 1rem;
-        width: 60%;
+        width: 66%;
         margin-inline: auto;
         border: none;
         color: var(--white);
@@ -142,6 +141,7 @@ main {
         background-color: var(--pr-clr);
         img {
           width: 24px;
+          margin-left: auto;
         }
       }
     }
