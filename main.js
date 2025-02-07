@@ -1,4 +1,5 @@
 const inputs = document.querySelectorAll("input");
+// > The date picker
 function setMinDate() {
   const today = new Date().toISOString().split("T")[0];
   // document.querySelector(".event-date").setAttribute("min",today);
@@ -11,6 +12,7 @@ function setMinDate() {
     }
   });
 }
+// > Check the inputs field if empty
 function fireAlertMsg() {
   inputs.forEach((input) => {
     if (input.classList.contains("redAlert") && input == "") {
@@ -22,6 +24,7 @@ function fireAlertMsg() {
 }
 
 setMinDate();
+// > Adding event to the local storge
 function addEvent() {
   const eventName = document.querySelector(".event-name").value;
   const eventDate = document.querySelector(".event-date").value;
@@ -54,6 +57,7 @@ function addEvent() {
     fireAlertMsg();
   }
 }
+// > Display the events that stored in the local Storge
 function displayEvents() {
   const events = JSON.parse(localStorage.getItem("events")) || [];
   const eventsList = document.querySelector(".events");
@@ -72,7 +76,7 @@ function displayEvents() {
       (timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
     );
     const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-    // if the user prefer to show aeconds 
+    // if the user prefer to show aeconds
     // const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
     const countDown = `${days}d ${hours}h ${minutes}m`;
     eventsList.innerHTML += `
@@ -99,7 +103,7 @@ function displayEvents() {
   });
 }
 displayEvents();
-
+// > Delete Event
 function deleteEvent(index) {
   const events = JSON.parse(localStorage.getItem("events"));
   events.splice(index, 1);
